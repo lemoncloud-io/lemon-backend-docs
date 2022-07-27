@@ -7,7 +7,7 @@
   "bugs": "https://github.com/lemoncloud-io/lemon-backend-docs/issues",
   "devDependencies": {
     "stylelint": "^13.7.2",
-    "@primer/css": "^15.2.0",
+    "@primer/css": "^20.3.0",
     "prettier": "^2.7.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-primer": "^9.2.1",
