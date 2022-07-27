@@ -47,7 +47,7 @@ exclude:
 # include: ["docs/tests/"]
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+logo: "/assets/images/lemoncloud-logo.svg"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -82,7 +82,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Goto &nbsp;<strong>GitHub</strong>":
-    - "//github.com/lemoncloud-io"
+    - "//github.com/lemoncloud-io/lemon-backend-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false

@@ -2,21 +2,22 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Documents for using Lemon Backend Technology."
 permalink: /
 ---
 
-# 프로젝트 이름
+# Lemon Backend
 {: .fs-9 }
 
-이 프로젝트는 블라블라~~~~~~
+Documents for everyone by using lemon backend technology.
 {: .fs-6 .fw-300 }
 
-[시작하기](#시작하기){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [깃헙보기](https://github.com/lemoncloud-io{{ site.baseurl }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[시작하기](#시작하기){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[깃헙보기](https://github.com/lemoncloud-io{{ site.baseurl }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## 시작하기
+## 시작하기 (Usage)
 
 이 문서를 수정하기 위한 설정 및 기본 사항
 
