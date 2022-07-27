@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lemon Backend Docs
-description: A Jekyll theme for documentation
+title: Lemon Backend
+description: Lemon Backend Technology 사용을 위한 기술 문서들
 baseurl: "/lemon-backend-docs" # the subpath of your site, e.g. /blog
 url: "https://tech.lemoncloud.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -81,8 +81,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/lemoncloud-io/lemon-backend-docs"
+  "Goto &nbsp;<strong>GitHub</strong>":
+    - "//github.com/lemoncloud-io"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -98,7 +98,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a> <a href=\"https://www.netlify.com/\">This site is powered by Netlify.</a>"
+footer_content: "Copyright &copy; 2022 <a href=\"https://lemoncloud.io\">LemonCloud</a> Co Ltd. Distributed by an <a href=\"https://github.com/lemoncloud-io/lemon-backend-docs/main/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -108,7 +108,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_link_text: "<strong>GitHub</strong>에서&nbsp;수정"
 gh_edit_repository: "https://github.com/lemoncloud-io/lemon-backend-docs" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
@@ -140,4 +140,4 @@ compress_html:
   # ignore:
   #   envs: all
 
-theme: jekyll-theme-cayman
+theme: just-the-docs
