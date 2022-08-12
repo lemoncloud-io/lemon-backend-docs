@@ -8,9 +8,6 @@ nav_order: 2
 # 사용자인증(OAuth) 및 푸쉬(Push)
 {: .no_toc }
 
-`lemon-accounts-api`를 통한 소셜 로그인 지원과, 푸쉬 메세지 지원
-{: .fs-6 .fw-300 }
-
 
 _참고_ 라이브러리 `@lemoncloud/lemon-accounts-api`
 {: .fs-2 .fw-300 }
@@ -25,13 +22,15 @@ _참고_ 라이브러리 `@lemoncloud/lemon-accounts-api`
 
 ## Overview
 
-`custom-backend-api` <--> `lemon-accounts-api` 연동 관계에서 설명함
+`custom-backend-api`와 `lemon-accounts-api`의 인증연동과 푸쉬관리
+{: .fs-5 .fw-300 }
 
+![](../../../assets/images/oauth-push.png)
 
 **[모델링]**
 
 1. `Account`: 계정으로, 각 소셜 로그인 마다 1개씩 생성됨
-    - `.id` := `identity-id` from AWS Identity Provider.
+    - `.id` := `identity-id` from AWS Identity Provider. _(참고 identity-id 는 social-id 에 1:1 매칭됨)_{: .fs-2 }
     - `.userId` := `User.id`
 
 1. `User`: 유저(또는 사용자)로, 1유저는 N개의 계정 가능함.
@@ -63,7 +62,11 @@ _참고_ 라이브러리 `@lemoncloud/lemon-accounts-api`
 1. _(frontend-app)_ 매 `5분`마다 엑세시 토큰 재발급하여, 세션 유지함
     - `POST /oauth/<auth-id>/refresh?current&signature` 요청
     - `signature` 계산은 아래와 같음
-    ```js
+    ```ts
+    const hmac = (data: string, sig: string) => $U.hmac(data, sig, 'sha256');
+    expect2(() => hmac('', '')).toEqual('xaJI7uxp6BdToJl8B6b6YF5eU4/ZnZIdOalMWjf3M+w=');
+    expect2(() => hmac('a', '')).toEqual('HDQJIXFIViPTp4GIM3GfWLvEVMn0xlWMlfnftH9dQI4=');
+    expect2(() => hmac('a', 'b')).toEqual('y0SLRAxCrIrQhPyKh5XJj1t4AjWcMF6r1X7Nsg4kiJY=');
     //WARN - userAgent 는 인증당시의 사용자 브라우저 기준임 (최대 30분)
     const data = [current, accountId, identityId, identityToken, userAgent].join('&');
     return hmac(hmac(hmac(data, authId), accountId), identityId)
@@ -113,5 +116,3 @@ _참고_ 라이브러리 `@lemoncloud/lemon-accounts-api`
 | Date       | Author   | Description
 |--          |--        |--
 | 2022-08-08 | Steve    | summarized as overview.
-
-
