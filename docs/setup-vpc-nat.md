@@ -13,8 +13,7 @@ Lambda에서 VPC 이용과 NAT 연결 설정 방범 정리
 
 ![](../../../assets/images/vpc-diagram.png)
 
-----------------------
-## 구성 방법
+## 구성 방법 (VPC + NAT)
 
 1. Create a new `VPC` like `<profile>-vpc`.
 1. Create a new `IGW` (Internet Gateway) for public Internet from inside your VPC.
@@ -31,8 +30,7 @@ Lambda에서 VPC 이용과 NAT 연결 설정 방범 정리
     - add a new route to route to your `NAT` Gateway from `0.0.0.0/0`.
 
 
-----------------------
-## 구성 예제
+### 구성 예제
 
 **Lemon**
 
@@ -45,12 +43,22 @@ Lambda에서 VPC 이용과 NAT 연결 설정 방범 정리
 | NAT       | `lemon-public-nat`    | `198.51.100.4`                | 10.0.0.4          |
 
 
-----------------------
-## 구성 테스트하기
+### 구성 테스트하기
 
-use sample [lemon-hello-api](https://github.com/lemoncloud-io/lemon-hello-api)
+Use sample project [lemon-hello-api](https://github.com/lemoncloud-io/lemon-hello-api)
 
-- 해당 `<profile>-private-2a`의 VPC/Subnet 으로 Lambda를 올림 (see `env/config.js`)
-- http request 로 인터넷 연결이 되는지 확인
+- 해당 `<profile>-private-2a`의 VPC/Subnet 으로 Lambda를 올림 (see `readme.md`)
+- http request 로 인터넷 연결이 되는지 확인 (use `execute-api`)
 - 필요시 `VPC Endpoint` 구성 필요.
+
+
+## 엔드포인트 구성 (VPC Endpoint)
+
+Lambda VPC 에서 SNS/SQS/KMS 등을 이용할때, 필요함
+
+1. Create `Endpoints` in VPC / Endpoints menu.
+
+example)
+
+![](../../../assets/images/vpc-endpoints.png)
 
