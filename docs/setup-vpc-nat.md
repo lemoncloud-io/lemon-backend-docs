@@ -11,7 +11,7 @@ Lambda에서 VPC 이용과 NAT 연결 설정 방범 정리
 - `VPC`에서 `Lambda` 구성시 인터넷 연결이 끊어지는데, `NAT` 구성으로 가능함.
 - `NAT`는 `ElasticIP` 설정으로 외부에서는 고정 아이피로 설정 가능함.
 
-![](../../../assets/images/vpc-diagram.png)
+![](../../assets/images/vpc-diagram.png)
 
 ## 구성 방법 (VPC + NAT)
 
@@ -60,5 +60,5 @@ Lambda VPC 에서 SNS/SQS/KMS 등을 이용할때, 필요함
 
 example)
 
-![](../../../assets/images/vpc-endpoints.png)
+![](../../assets/images/vpc-endpoints.png)
 
