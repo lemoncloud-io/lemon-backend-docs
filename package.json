@@ -8,7 +8,7 @@
   "devDependencies": {
     "@primer/css": "^20.8.1",
     "prettier": "^2.8.4",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.3.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-primer": "^11.1.1",
     "stylelint-prettier": "^1.2.0",
