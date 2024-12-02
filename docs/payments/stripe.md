@@ -115,3 +115,9 @@ const subscription = await stripe.subscriptions.update(
 const canceledSubscription = await stripe.subscriptions.del(subscriptionId);
 ```
 </div>
+
+
+
+## Reference
+- Stripe 구독 결제 : [https://docs.stripe.com/billing/subscriptions/build-subscriptions](https://docs.stripe.com/billing/subscriptions/build-subscriptions)
+- Stripe 카드 등록 : [https://docs.stripe.com/api/cards](https://docs.stripe.com/api/cards)
