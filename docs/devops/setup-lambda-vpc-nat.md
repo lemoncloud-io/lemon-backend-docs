@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lambda VPC Config
+title: Setup Lambda VPC+NAT Config
 parent: Setup DevOps
 ---
 
