@@ -27,6 +27,7 @@ parent: Setup DevOps
     - add each for `kms`, `sns`, `sqs`, and `execute-api`
         - security-group: `infra-services`
         - subnets: `public-2a/2c`
+        - each cost: `$8.76/m` + `$0.01/GB` for `Interface`. but free for `Gateway`
 
         * kms: `com.amazonaws.ap-northeast-2.kms` w/ `Interface`
         * sns: `com.amazonaws.ap-northeast-2.sns` w/ `Interface`
