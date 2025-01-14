@@ -35,6 +35,9 @@ parent: Setup DevOps
         * lambda: `com.amazonaws.ap-northeast-2.lambda` w/ `Interface`
         * dynamodb: `com.amazonaws.ap-northeast-2.dynamodb` w/ `Gateway`
 
+    - if s3 is required in VPC.
+        * s3: `com.amazonaws.ap-northeast-2.s3` w/ `Gateway`
+
 
 ----------------------
 ## 배포후 테스트하기
